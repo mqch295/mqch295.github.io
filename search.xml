@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Swift的集合类型（二）]]></title>
+    <url>%2F2018%2F07%2F03%2FSwift%E7%9A%84%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B%EF%BC%88%E4%BA%8C%EF%BC%89%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>Swift</category>
+      </categories>
+      <tags>
+        <tag>Swift</tag>
+        <tag>集合</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Swift的集合类型（一）]]></title>
+    <url>%2F2018%2F07%2F02%2FSwift%E7%9A%84%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B%EF%BC%88%E4%B8%80%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[在我们日常的工作或学习中，集合类型总是伴随在我们左右。如何更好的使用的集合类型，是这节复习的重点。高效的使用集合数据类型，可以让我们的代码拥有良好的执行效率。所以，开始今天的复习吧。集合分为有序集合与无序集合，今天我们先来复习一下有序集合，也就是Array。 Array创建Array根据上一节的内容，我们知道，在创建声明一个对象（变量）时，可以使用类型推导也可以直接显式声明类型。123var array1: Array&lt;Int&gt; = Array&lt;Int&gt;()var array2: [Int] = []var array3 = array2 array1与array2是使用显式声明，array3是根据array2的类型进行的类型推导。其中Array与[Int]没有任何区别，可以根据个人喜好进行选择。我一般使用[Int]。上面的三种创建方式没有初始值，下面我们来看一下有初始值的集合该如何创建。123456// [1, 1, 1]var x = [Int](repeating: 1, count: 3)// [1, 1, 1, 1, 1, 1]var y = x + x// [1, 2, 3, 4, 5]var z = [1, 2, 3, 4, 5] 第一种，我们创建了一个多个相同元素的集合，repeating表示需要重复的元素，count表示元素的个数。第二种根据已经存在的集合创建新的集合。第三种就是直接赋值创建。这三种是最简单的创建方式，后面更复杂的创建方式，后面涉及到了再说，一般这三种创建方式基本够用。 操作Array元素常用的Array属性 .count可以查看集合内元素的个数 .isEmpty可以判断集合内是否含有元素，即集合是否为空.isEmpty与.count == 0意义相同。访问Array中的元素索引访问与大多数编程语言一样，swift的集合也支持下标索引访问。let num = z[2] // num is 3但是这种方式，在swift不太提倡，因为直接调用下标索引进行访问，可能会出现数组越界问题。除非你在调用时能保证集合里有下标索引指向的元素。否则最好不要直接使用。区间访问我们还可以使用区间进行访问集合元素12let nums1 = z[0..&lt;2] // nums1 is [1, 2]let nums2 = z[0...2] // nums2 is [1, 2, 3] 这里有个知识点，使用区间访问集合得到的不是一个Array，而是叫做ArraySlice。什么是ArraySlice呢？简单点讲就是集合某一段内容的视图（view），他不保存集合的内容，只保存视图引用的集合范围。这里借用泊学网的一个图片，来更加清楚的了解一下ArraySlice。但是我们也可以直接通过这个view创建新的集合对象。let newArray = Array(nums2 = z[0...2]) 遍历数组(访问每一个元素)for循环123for value in z&#123; print(value) &#125; 迭代器（enumerated）123for (index, value) in z.enumerated() &#123; print("\(index): \(value)")&#125; forEach1z.forEach&#123; print($0) &#125; 添加和删除元素集合末尾添加元素时，使用append(element:)，或者直接使用运算符+=进行添加元素。在非末尾添加元素时，或者称之为插入元素时，使用insert方法。z.insert(0, at: z.firstIndex)第一个参数表示插入的元素，第二个参数表示插入的位置。注意：插入位置要保证在0…array.endIndex范围内，否则会报错。 删除元素要注意集合的元素个数。使用remove(at:)删除元素时要保证该位置的安全性。使用removeLast方法删除时要注意集合是否为空，对空数组调用removeLast方法也会引发错误。使用popLast，如果数组为空，会返回nil。 Array与NSArray在swift中，Array是值语义实现的，而NSArray是引用语义实现的。在Swift中，var和let关键字定义的Array，控制集合是否可以被修改。而var和let关键字定义的NSArray和NSMutableArray，无法控制集合是否可以被修改。它们只控制对应的变量是否可以被赋值成新的NSArray或NSMutableArray对象。Array的小知识点：Swift在复制Array时，它使用了copy on write的方式。即如果你仅仅复制了Array而不对它修改时，真正的复制是不会发生的，两个数组仍旧引用同一个内存地址。只有当你修改了其中一个Array的内容时，才会真正让两个Array对象分开。 Swift中Array的特有方法 查找数组中元素的位置：let index = a.index{ $0 == 1} 筛选出数组中的某些元素let ary = a.filter { $0 % 2 == 0 } 访问数组中第一个和最后一个元素的first和last属性123a.first // 1a.last // 3type(of: a.first) // Optional&lt;Int&gt;.Type 当Array为空时，它们的值都是nil 集合相关内容比较多，先休息一下，好好消化一下。后面我们再讲集合的一些高级用法。]]></content>
+      <categories>
+        <category>Swift</category>
+      </categories>
+      <tags>
+        <tag>Swift</tag>
+        <tag>集合</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Swift基础复习]]></title>
+    <url>%2F2018%2F06%2F28%2FSwift%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0%2F</url>
+    <content type="text"><![CDATA[断断续续使用Swift已经开发了好几款App了，但是一直没有做深入的学习是研究，最近的经历让我发觉，单纯的作为UI工程师已经让我很难再往前走一步了，貌似进入了瓶颈期。算法和数据结构早已被丢弃在大学校园，就连我使用最多的Swift也未曾让我感到踏实，这一切都是因为一开始没有找好自己的定位，只图项目的可用性，而未考虑其健壮性和安全性。后期的优化也使我无法感到力有余而心不足。没有打好地基，不敢奢求稳固的环境。 痛定思痛，从今日起，开始重新学习Swift，把遗漏的知识点逐个捡起，打好地基，制图未来自己不后悔，没有放弃自己。 加油！！！]]></content>
+      <categories>
+        <category>Swift</category>
+      </categories>
+      <tags>
+        <tag>Swift</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Swift基础数据类型]]></title>
+    <url>%2F2018%2F06%2F28%2FSwift%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%2F</url>
+    <content type="text"><![CDATA[第一章第一节var与let在swift中，用var来表示可变量，let表示不可变量，也叫做常量。在项目中，尽可能的多使用let，这样可以防止变量被意外修改，同时let较var而言，编译器对常量做了更多的优化。 Type inference / annotationswift刚推出时，他的类型推导特性吸引了一大批开发者，我们可以在申明变量或常量时，无需指定其类型，编译器会根据初始值自动判断该变量（或常量）的数据类型。var x = 5 与 var x: Int = 5相同，编译器会自动推导出X为Int类型。这个特性在Swift中叫做Type Inference。但是有时我们无法在声明时赋予其初始值，这时就需要开发者在声明时显式标明其数据类型。var x: Int这种显式声明数据类型的形式，在swift中叫做Type annotation。 第二节 数字类型介绍完变量和常量的两种定义方式之后，接下来就具体来看下不同数据类型在swift中不同的表现。 在swift中，我们常用的数字类型有整数型和浮点数型。 Int &amp; UInt根据是否带有符号分为Int与UInt,UInt代表无符号整数。根据占用的内存空间分为 Int8 Int16 Int32 Int64 UInt8 UInt16 UInt32 UInt64 虽然swift划分了8种整数类型，但是我们一般只是用Int与UInt，因为编译器会根据编译平台自动转换成对应的整数类型。例如在64位的平台下，Int.max 与 Int64.max是相等的。当然，在特定的情境下，我们还是会选择特定的整数类型进行类型计算。但是一般项目中，或者说大部分（基本全部，不排除特例）公司在编写代码使用整数类型时，只会选择Int或UInt。常规项目中，我们其实只使用Int就可以了，UInt都很少使用，这样的好处是便于类型之间转换，减少不必要的麻烦。 Int定义的变量（或常量）的值不仅可以使用10进制来表示，同时也支持多进制的表示。1234let fifteenWithDecimal = 15 #十进制let fifteenWithHex = 0xF #十六进制let fifteenWithOctal = 0o17 #八进制let fifteenWithBinary = 0b1111 #二进制 整数类型的值也可以使用千分位进行分隔12let num1 = 1_000_000let num2 = 1000000 Float &amp; Doubleswift中的浮点型数据类型与其他编程语言相同，都分为了float和double类型，分别代表了单精度和双精度浮点类型。其中float最多表示6位精度，double最少可以表示15位精度。一般情况下，为了保证数据的完整性，我们都是用double来表示浮点数据。科学计数法在浮点型数据中，最常用的就是科学计数法来表示一个数字。比如十进制数字1000.00可以用10e2来表示，圆周率中常用的PI，可以表示为314e-2即3.14。 关于数值类型的type inference12345var x = 3type(of: x) //Int.Typevar y = 3.14type(of: y) //Double.Type type(of: )可以查看变量的类型 不同数值类型间的计算字面量之间计算12let z = 3 + 0.14 //z is 3.14type(of: z) //Double.Type 变量之间计算1let z = x + y //报错 数值变量之间计算，必须保证同一类型。类型不统一时需要显示转换变量类型方可计算。1let z = Double(x) + y //z is 3.14 第三节 Tuple元组在swift中，有一种类型叫做Tuple，中文一般翻译为元组。元组可以将几个数据组合起来，比如在网络请求中，我们经常会看到（404, “NotFound”）或者（200, “HTTP OK”）。用tuple来表示let state =（200, &quot;HTTP OK&quot;），同时我们还可以为tuple中每个元素设定一个名字。let state = (code: 200, message: &quot;HTTP OK&quot;)。如果tuple没有给每个元素设定名字，在访问时，使用下标序数进行访问，比如let code = state.0 tuple的下标是从0开始。如果设定了名字，我们就可以直接使用名字进行访问let code = state.codetuple的真正类型其实是由其元素决定的，比如（200, “HTTP OK”）,这个tuple的类型就是（Int, String）。多个tuple进行对比时有一定的要求，不同元素个数的tuple不能进行比较，相同元素个数的情况下，元素个数不能超过6个，超过6个依然不能比较。tuple比较时，是根据从前到后进行比较的，比如let a =（1，2，2）与let b =（1，2，3）进行比较时， x &lt; y // True 常用基本操作符（Basic operators）swift同大多数语言相同，也支持一些基本的操作符进行各种运算。赋值运算符=用等号进行赋值基本算术运算操作符12345+ //加- //减* //乘/ //除% //取模 在这里要注意的是，swift中不支持对浮点数取模。如果需要对浮点数取模的话需要调用.truncatingRemainder(dividingBy:)方法进行计算。复合运算操作符12345+= -= *= /= %= swift3中，移除了自增（++）与自减（–），需要按照+=1或者-=1进行表示。比较操作符12345678== //相等!= //不等&gt; //大于&lt;//小于&gt;=//大于等于&lt;= //小于等于=== //引用同一对象!== //非引用同一对象 三元操作符a == b ? c : d三元运算可以减少一些if…else的语句Nil Coalescing Operatoroptional类型后面会讲到。这是在swift中特有的操作符，用来处理和判断optional类型数据。12let a: String? = "lalala"let happy = a ?? "wuwuwu" 当a不为nil时，happy等于“happy”，否则表示“wuwuwu”区间操作符a...b //闭区间a..&lt;b //半开半闭区间逻辑运算符123&amp;&amp; //与|| //或！ //非 至于字符串类型，因为swift4.0之后，string又成为了集合类型，待复习完集合类型之后，我们在反过头来继续复习字符串。]]></content>
+      <categories>
+        <category>Swift</category>
+      </categories>
+      <tags>
+        <tag>Swift 基础数据类型</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Git入门-修改管理]]></title>
+    <url>%2F2018%2F04%2F25%2FGit%E5%85%A5%E9%97%A8-%E4%BF%AE%E6%94%B9%E7%AE%A1%E7%90%86%2F</url>
+    <content type="text"><![CDATA[昨天大概说了一下Git的基本入门，包括安装及初始化，还有一些Git中常用的方法，包括：添加、提交、查看文件状态、查看修改内容、查看提交日志、版本回退。在使用版本回退时会遇到一些特殊的情况，今天就整理一下对于版本回退及对于修改操作的管理。 暂存区与工作区首先要明白两个概念，暂存区和工作区。暂存区是Git非常重要的概念，弄明白了暂存区，就基本弄明白了Git的很多操作到底干了什么。暂存区也是与SVN最大不同的地方。工作区很简单，就是电脑里看到的目录，比如我们创建一个文件夹。可以看到devFile里已经有了.git目录，说明这devFile个目录就是我们的工作区。.git目录就是我们的版本库，其中最重要的就是我们说的暂存区(stage)。先看一下这个图，左边就是我们的工作区，当我们操作完成时，使用git add命令将工作区的文件添加到暂存区，然后再进行git commit操作提交到分支上。从图中可以看出，暂存区是存放工作区添加进来的文件或对应的操作。所以，我们可以进行多次git add,等到你觉得OK的时候，再一次性提交。提交之后并且工作区未做任何操作，暂存区去就清空了，变得干干净净。 管理修改跟踪修改首先要明白Git跟踪并管理的是修改，而非文件。比如对于一个文本文件，新增了一行，这就是一个修改，删除了一行，也是一个修改，更改了某些字符，也是一个修改，删了一些又加了一些，也是一个修改。甚至创建一个新文件，也算一个修改。先创建一个text文件，然后在readme.text中输入 1234Git is a distributed version control system.Git is free software distributed under the GPL.Git has a mutable index called stage.Git tracks changes. 然后将readme.text添加到暂存区并提交]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Git入门]]></title>
+    <url>%2F2018%2F04%2F24%2FGit%E5%85%A5%E9%97%A8-%E7%AE%80%E4%BB%8B%2F</url>
+    <content type="text"><![CDATA[从实习到现在，对于版本控制一直没有系统的学习过，公司一直使用的是SVN（简单使用），还没有用过Git,由于最近被安利了一波Git-Flow，决定把Git系统的学习一下，网上关于Git的教程及帖子，多如牛毛，在寻找教程的过程中，发现众人都推荐廖雪峰的Git教程，所以以廖雪峰的Git教程为基础，开此博文以记录学习过程。对于Git的简介就不再重复叙述了，廖雪峰的教程很形象清晰的解释了什么是Git,以及Git的前世今生什么的。有兴趣可以去廖雪峰的教程了解一下。Git简介在看Git的简介时，让我大吃一惊，Git居然是Linus仅仅花了两周时间写出来的，什么是大牛？这才是大牛啊！！！ 公司一直使用的是SVN，其实去年到新公司之后才开始接触的版本控制（害羞脸），对于SVN的使用仅仅停留在切分支，push,pull,合并分支，打tag。所以不敢说了解SVN，只能简单的基础使用。Git与SVN同样都是版本控制工具，只不过一个是集中式一个是分布式，但是Git较SVN而言，还是有些许的优点。 速度快 不必时时联网 分布式 Git的安装手上只有MacOS和ubuntu,所以就只记录一下Linux和mac的安装方法。Windows版的Git安装过程可参考Windows-Git 在Linux上安装Git查看本机是否已安装Git123$ gitThe program &apos;git&apos; is currently not installed. You can install it by typing:sudo apt-get install git Linux会友好地告诉你Git没有安装，还会告诉你如何安装Git Debian或Ubuntu安装Git12//Soeasy,直接完成Git的安装，非常简单。sudo apt-get install git 其他Linux系统可以直接通过源码安装。先从Git官网下载源码，然后解压，依次输入：./config，make，sudo make install 这几个命令安装就好了。 在Mac OS X上安装Git使用homebrew安装使用Xcode安装，在Xcode中下载Command Line Tools就好了。 Git的基本使用创建版本库 版本库又名仓库，英文名repository，你可以简单理解成一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。 通过git init命令把某个目录变成Git可以管理的仓库 12$ git initInitialized empty Git repository in /Users/XXXX/learngit/.git/ .git这个目录是Git来跟踪管理版本库的，不要手动修改这个目录里面的文件，不然一不小心就把Git仓库给玩坏了。如果看不到这个目录的话，使用ls -ah就能看到了。 常用命令添加：git add xxxx.xxx提交：git commit -m “about files info”查看文件状态：git status查看修改内容: git diff查看提交日志: git log –pretty=oneline --pretty=oneline可以简化输出内容 1234$ git log --pretty=oneline3628164fb26d48395383f8f31179f24e0882e1e0 xxxxxxea34578d5496d7dd233c827ed32a8cd576c5ee85 xxxxxxxxxcb926e7ea50ad11b8f9e909c05226233bf755030 xxxxxxxx 前面一大串没规则的字符串是版本号，也就是commitID，我们可以使用commitID进行其他操作，后面会提到。回退：根据版本位序进行回退 123//在Git中，用 HEAD 表示当前版本，上一个版本就是 HEAD^，上上一个版本就是 HEAD^^，当版本过多时也可以使用 HEAD~100，100表示往上100个的版本。$ git reset --hard HEAD^HEAD is now at ea34578 xxxxxxxxxxxx 根据版本号进行回退 123//版本号没必要写全，前几位就可以了，Git会自动去找。当然也不能只写前一两位，因为Git可能会找到多个版本号，就无法确定是哪一个了。$ git reset --hard 3628164HEAD is now at 3628164 xxxxxxxxxxx 当你使用reset后又后悔，需要恢复到某个时刻时，但是此时使用git log找不到commitID时，可以使用git reflog查看记录的每次Git命令,寻找commitID。 12345$ git reflogea34578 HEAD@&#123;0&#125;: reset: moving to HEAD^3628164 HEAD@&#123;1&#125;: commit: xxxxxxxxxxea34578 HEAD@&#123;2&#125;: commit: xxxxxxxxxxcb926e7 HEAD@&#123;3&#125;: commit (initial): xxxxxxxxxx 以上就是Git的一些基本入门，对于Git的修改，后面再做介绍。先把这些东西好好消化一下。。。]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+</search>

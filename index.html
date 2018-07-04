@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml" />
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="记录平常工作遇到的问题和学习的知识整理">
+<meta name="keywords" content="Mqch">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mqch&#39;s Blog">
+<meta property="og:url" content="https://mqch295.github.io/index.html">
+<meta property="og:site_name" content="Mqch&#39;s Blog">
+<meta property="og:description" content="记录平常工作遇到的问题和学习的知识整理">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mqch&#39;s Blog">
+<meta name="twitter:description" content="记录平常工作遇到的问题和学习的知识整理">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://mqch295.github.io/"/>
+
+
+
+
+
+  <title>Mqch's Blog</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-117601257-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?83d41773229f0a9a7ea552480a78cd75";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mqch's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">个人工作及学习记录</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://mqch295.github.io/2018/07/03/Swift的集合类型（二）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mqch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mqch's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/03/Swift的集合类型（二）/" itemprop="url">Swift的集合类型（二）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-03T11:35:26+08:00">
+                2018-07-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://mqch295.github.io/2018/07/02/Swift的集合类型（一）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mqch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mqch's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/02/Swift的集合类型（一）/" itemprop="url">Swift的集合类型（一）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-02T15:50:37+08:00">
+                2018-07-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在我们日常的工作或学习中，集合类型总是伴随在我们左右。如何更好的使用的集合类型，是这节复习的重点。高效的使用集合数据类型，可以让我们的代码拥有良好的执行效率。<br>所以，开始今天的复习吧。<br>集合分为有序集合与无序集合，今天我们先来复习一下有序集合，也就是<strong>Array</strong>。</p>
+<h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><h4 id="创建Array"><a href="#创建Array" class="headerlink" title="创建Array"></a>创建Array</h4><p>根据上一节的内容，我们知道，在创建声明一个对象（变量）时，可以使用类型推导也可以直接显式声明类型。<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var array1: Array&lt;Int&gt; = Array&lt;Int&gt;()</span><br><span class="line">var array2: [Int] = []</span><br><span class="line">var array3 = array2</span><br></pre></td></tr></table></figure></p>
+<p>array1与array2是使用显式声明，array3是根据array2的类型进行的类型推导。<br>其中Array<int>与[Int]没有任何区别，可以根据个人喜好进行选择。我一般使用[Int]。<br>上面的三种创建方式没有初始值，下面我们来看一下有初始值的集合该如何创建。<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// [1, 1, 1]</span></span><br><span class="line">var x = [Int](repeating: <span class="number">1</span>, count: <span class="number">3</span>)</span><br><span class="line"><span class="comment">// [1, 1, 1, 1, 1, 1]</span></span><br><span class="line">var y = x + x</span><br><span class="line"><span class="comment">// [1, 2, 3, 4, 5]</span></span><br><span class="line">var z = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br></pre></td></tr></table></figure></int></p>
+<p>第一种，我们创建了一个多个相同元素的集合，repeating表示需要重复的元素，count表示元素的个数。第二种根据已经存在的集合创建新的集合。第三种就是直接赋值创建。这三种是最简单的创建方式，后面更复杂的创建方式，后面涉及到了再说，一般这三种创建方式基本够用。</p>
+<h4 id="操作Array元素"><a href="#操作Array元素" class="headerlink" title="操作Array元素"></a>操作Array元素</h4><h5 id="常用的Array属性"><a href="#常用的Array属性" class="headerlink" title="常用的Array属性"></a>常用的Array属性</h5><ul>
+<li><code>.count</code>可以查看集合内元素的个数</li>
+<li><code>.isEmpty</code>可以判断集合内是否含有元素，即集合是否为空<br><code>.isEmpty</code>与<code>.count == 0</code>意义相同。<h5 id="访问Array中的元素"><a href="#访问Array中的元素" class="headerlink" title="访问Array中的元素"></a>访问Array中的元素</h5><strong>索引访问</strong><br>与大多数编程语言一样，swift的集合也支持下标索引访问。<br><code>let num = z[2] // num is 3</code><br>但是这种方式，在swift不太提倡，因为直接调用下标索引进行访问，可能会出现数组越界问题。除非你在调用时能保证集合里有下标索引指向的元素。否则最好不要直接使用。<br><strong>区间访问</strong><br>我们还可以使用区间进行访问集合元素<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let nums1 = z[<span class="number">0.</span>.&lt;<span class="number">2</span>] <span class="comment">// nums1 is [1, 2]</span></span><br><span class="line">let nums2 = z[<span class="number">0.</span>.<span class="number">.2</span>] <span class="comment">// nums2 is [1, 2, 3]</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这里有个知识点，使用区间访问集合得到的不是一个Array，而是叫做ArraySlice。什么是ArraySlice呢？简单点讲就是集合某一段内容的视图（view），他不保存集合的内容，只保存视图引用的集合范围。这里借用泊学网的一个图片，来更加清楚的了解一下ArraySlice。<br><img src="http://os53x2lpx.bkt.clouddn.com/15305202263489.jpg" alt=""><br>但是我们也可以直接通过这个view创建新的集合对象。<br><code>let newArray = Array(nums2 = z[0...2])</code></p>
+<h5 id="遍历数组-访问每一个元素"><a href="#遍历数组-访问每一个元素" class="headerlink" title="遍历数组(访问每一个元素)"></a>遍历数组(访问每一个元素)</h5><p><strong>for循环</strong><br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> value <span class="keyword">in</span> z&#123;</span><br><span class="line">    print(value)</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>迭代器（enumerated）</strong><br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (index, value) <span class="keyword">in</span> z.enumerated() &#123;</span><br><span class="line">    print(<span class="string">"\(index): \(value)"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>forEach</strong><br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">z.forEach&#123; print($<span class="number">0</span>) &#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="添加和删除元素"><a href="#添加和删除元素" class="headerlink" title="添加和删除元素"></a>添加和删除元素</h5><p>集合末尾添加元素时，使用append(element:)，或者直接使用运算符<code>+=</code>进行添加元素。<br>在非末尾添加元素时，或者称之为插入元素时，使用insert方法。<br><code>z.insert(0, at: z.firstIndex)</code><br>第一个参数表示插入的元素，第二个参数表示插入的位置。<em>注意：</em>插入位置要保证在0…array.endIndex范围内，否则会报错。</p>
+<p>删除元素要注意集合的元素个数。使用remove(at:)删除元素时要保证该位置的安全性。使用removeLast方法删除时要注意集合是否为空，对空数组调用removeLast方法也会引发错误。<br>使用popLast，如果数组为空，会返回nil。</p>
+<h4 id="Array与NSArray"><a href="#Array与NSArray" class="headerlink" title="Array与NSArray"></a>Array与NSArray</h4><p>在swift中，Array是值语义实现的，而NSArray是引用语义实现的。<br>在Swift中，var和let关键字定义的Array，控制集合是否可以被修改。而var和let关键字定义的NSArray和NSMutableArray，无法控制集合是否可以被修改。它们只控制对应的变量是否可以被赋值成新的NSArray或NSMutableArray对象。<br>Array的小知识点：Swift在复制Array时，它使用了copy on write的方式。即如果你仅仅复制了Array而不对它修改时，真正的复制是不会发生的，两个数组仍旧引用同一个内存地址。只有当你修改了其中一个Array的内容时，才会真正让两个Array对象分开。</p>
+<h4 id="Swift中Array的特有方法"><a href="#Swift中Array的特有方法" class="headerlink" title="Swift中Array的特有方法"></a>Swift中Array的特有方法</h4><ol>
+<li>查找数组中元素的位置：<br><code>let index = a.index{ $0 == 1}</code></li>
+<li>筛选出数组中的某些元素<br><code>let ary = a.filter { $0 % 2 == 0 }</code></li>
+<li>访问数组中第一个和最后一个元素的first和last属性<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a.first <span class="comment">// 1</span></span><br><span class="line">a.last  <span class="comment">// 3</span></span><br><span class="line">type(of: a.first) <span class="comment">// Optional&lt;Int&gt;.Type</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>当Array为空时，它们的值都是nil</p>
+<p>集合相关内容比较多，先休息一下，好好消化一下。后面我们再讲集合的一些高级用法。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://mqch295.github.io/2018/06/28/Swift基础复习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mqch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mqch's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/28/Swift基础复习/" itemprop="url">Swift基础复习</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-28T15:04:18+08:00">
+                2018-06-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>断断续续使用Swift已经开发了好几款App了，但是一直没有做深入的学习是研究，最近的经历让我发觉，单纯的作为UI工程师已经让我很难再往前走一步了，貌似进入了瓶颈期。算法和数据结构早已被丢弃在大学校园，就连我使用最多的Swift也未曾让我感到踏实，这一切都是因为一开始没有找好自己的定位，只图项目的可用性，而未考虑其健壮性和安全性。后期的优化也使我无法感到力有余而心不足。没有打好地基，不敢奢求稳固的环境。</p>
+<p>痛定思痛，从今日起，开始重新学习Swift，把遗漏的知识点逐个捡起，打好地基，制图未来自己不后悔，没有放弃自己。</p>
+<p>加油！！！</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://mqch295.github.io/2018/06/28/Swift基础数据类型/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mqch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mqch's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/28/Swift基础数据类型/" itemprop="url">Swift基础数据类型</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-28T14:58:16+08:00">
+                2018-06-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h4 id="第一节"><a href="#第一节" class="headerlink" title="第一节"></a>第一节</h4><h5 id="var与let"><a href="#var与let" class="headerlink" title="var与let"></a>var与let</h5><p>在swift中，用var来表示可变量，let表示不可变量，也叫做常量。<br>在项目中，尽可能的多使用let，这样可以防止变量被意外修改，同时let较var而言，编译器对常量做了更多的优化。</p>
+<h5 id="Type-inference-annotation"><a href="#Type-inference-annotation" class="headerlink" title="Type inference / annotation"></a>Type inference / annotation</h5><p>swift刚推出时，他的类型推导特性吸引了一大批开发者，我们可以在申明变量或常量时，无需指定其类型，编译器会根据初始值自动判断该变量（或常量）的数据类型。<br><code>var x = 5</code> 与 <code>var x: Int = 5</code>相同，编译器会自动推导出X为Int类型。这个特性在Swift中叫做<strong>Type Inference</strong>。<br>但是有时我们无法在声明时赋予其初始值，这时就需要开发者在声明时显式标明其数据类型。<br><code>var x: Int</code>这种显式声明数据类型的形式，在swift中叫做<strong>Type annotation</strong>。</p>
+<h4 id="第二节-数字类型"><a href="#第二节-数字类型" class="headerlink" title="第二节 数字类型"></a>第二节 数字类型</h4><p>介绍完变量和常量的两种定义方式之后，接下来就具体来看下不同数据类型在swift中不同的表现。</p>
+<p>在swift中，我们常用的数字类型有整数型和浮点数型。</p>
+<h5 id="Int-amp-UInt"><a href="#Int-amp-UInt" class="headerlink" title="Int &amp; UInt"></a>Int &amp; UInt</h5><p>根据是否带有符号分为Int与UInt,UInt代表无符号整数。<br>根据占用的内存空间分为</p>
+<table>
+<thead>
+<tr>
+<th>Int8</th>
+<th>Int16</th>
+<th>Int32</th>
+<th>Int64</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UInt8</td>
+<td>UInt16</td>
+<td>UInt32</td>
+<td>UInt64</td>
+</tr>
+</tbody>
+</table>
+<p>虽然swift划分了8种整数类型，但是我们一般只是用Int与UInt，因为编译器会根据编译平台自动转换成对应的整数类型。例如在64位的平台下，Int.max 与 Int64.max是相等的。当然，在特定的情境下，我们还是会选择特定的整数类型进行类型计算。但是一般项目中，或者说大部分（基本全部，不排除特例）公司在编写代码使用整数类型时，只会选择Int或UInt。常规项目中，我们其实只使用Int就可以了，UInt都很少使用，这样的好处是便于类型之间转换，减少不必要的麻烦。</p>
+<p>Int定义的变量（或常量）的值不仅可以使用10进制来表示，同时也支持多进制的表示。<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let fifteenWithDecimal = <span class="number">15</span> <span class="meta">#十进制</span></span><br><span class="line">let fifteenWithHex = <span class="number">0xF</span> <span class="meta">#十六进制</span></span><br><span class="line">let fifteenWithOctal = <span class="number">0</span>o17 <span class="meta">#八进制</span></span><br><span class="line">let fifteenWithBinary = <span class="number">0</span>b1111  <span class="meta">#二进制</span></span><br></pre></td></tr></table></figure></p>
+<p>整数类型的值也可以使用千分位进行分隔<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let num1 = <span class="number">1</span>_000_000</span><br><span class="line">let num2 = <span class="number">1000000</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="Float-amp-Double"><a href="#Float-amp-Double" class="headerlink" title="Float &amp; Double"></a>Float &amp; Double</h5><p>swift中的浮点型数据类型与其他编程语言相同，都分为了float和double类型，分别代表了单精度和双精度浮点类型。其中float最多表示6位精度，double最少可以表示15位精度。一般情况下，为了保证数据的完整性，我们都是用double来表示浮点数据。<br><strong>科学计数法</strong><br>在浮点型数据中，最常用的就是科学计数法来表示一个数字。比如十进制数字1000.00可以用10e2来表示，圆周率中常用的PI，可以表示为314e-2即3.14。</p>
+<p><strong>关于数值类型的type inference</strong><br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var x = <span class="number">3</span></span><br><span class="line">type(of: x)  <span class="comment">//Int.Type</span></span><br><span class="line"></span><br><span class="line">var y = <span class="number">3.14</span></span><br><span class="line">type(of: y)  <span class="comment">//Double.Type</span></span><br></pre></td></tr></table></figure></p>
+<p><code>type(of: )</code>可以查看变量的类型</p>
+<p><strong>不同数值类型间的计算</strong><br>字面量之间计算<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let z = <span class="number">3</span> + <span class="number">0.14</span> <span class="comment">//z is 3.14</span></span><br><span class="line">type(of: z)  <span class="comment">//Double.Type</span></span><br></pre></td></tr></table></figure></p>
+<p>变量之间计算<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let z = x + y <span class="comment">//报错</span></span><br></pre></td></tr></table></figure></p>
+<p>数值变量之间计算，必须保证同一类型。类型不统一时需要显示转换变量类型方可计算。<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let z = Double(x) + y <span class="comment">//z is 3.14</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="第三节-Tuple元组"><a href="#第三节-Tuple元组" class="headerlink" title="第三节 Tuple元组"></a>第三节 Tuple元组</h4><p>在swift中，有一种类型叫做Tuple，中文一般翻译为元组。<br>元组可以将几个数据组合起来，比如在网络请求中，我们经常会看到（404, “NotFound”）或者（200, “HTTP OK”）。用tuple来表示<code>let state =（200, &quot;HTTP OK&quot;）</code>，同时我们还可以为tuple中每个元素设定一个名字。<code>let state = (code: 200, message: &quot;HTTP OK&quot;)</code>。<br>如果tuple没有给每个元素设定名字，在访问时，使用下标序数进行访问，比如<code>let code = state.0</code> tuple的下标是从0开始。如果设定了名字，我们就可以直接使用名字进行访问<code>let code = state.code</code><br>tuple的真正类型其实是由其元素决定的，比如（200, “HTTP OK”）,这个tuple的类型就是（Int, String）。<br>多个tuple进行对比时有一定的要求，不同元素个数的tuple不能进行比较，相同元素个数的情况下，元素个数不能超过6个，超过6个依然不能比较。<br>tuple比较时，是根据从前到后进行比较的，比如<code>let a =（1，2，2）</code>与<code>let b =（1，2，3）</code>进行比较时， <code>x &lt; y // True</code></p>
+<h4 id="常用基本操作符（Basic-operators）"><a href="#常用基本操作符（Basic-operators）" class="headerlink" title="常用基本操作符（Basic operators）"></a>常用基本操作符（Basic operators）</h4><p>swift同大多数语言相同，也支持一些基本的操作符进行各种运算。<br><strong>赋值运算符</strong><br><code>=</code>用等号进行赋值<br><strong>基本算术运算操作符</strong><br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+ <span class="comment">//加</span></span><br><span class="line">- <span class="comment">//减</span></span><br><span class="line">* <span class="comment">//乘</span></span><br><span class="line">/ <span class="comment">//除</span></span><br><span class="line">% <span class="comment">//取模</span></span><br></pre></td></tr></table></figure></p>
+<p>在这里要注意的是，swift中<em>不支持</em>对浮点数取模。如果需要对浮点数取模的话需要调用<code>.truncatingRemainder(dividingBy:)</code>方法进行计算。<br><strong>复合运算操作符</strong><br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+= </span><br><span class="line">-= </span><br><span class="line">*= </span><br><span class="line">/= </span><br><span class="line">%=</span><br></pre></td></tr></table></figure></p>
+<p>swift3中，移除了<em>自增（++）</em>与<em>自减（–）</em>，需要按照+=1或者-=1进行表示。<br><strong>比较操作符</strong><br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">== <span class="comment">//相等</span></span><br><span class="line">!= <span class="comment">//不等</span></span><br><span class="line">&gt; <span class="comment">//大于</span></span><br><span class="line">&lt;//小于</span><br><span class="line">&gt;=<span class="comment">//大于等于</span></span><br><span class="line">&lt;= <span class="comment">//小于等于</span></span><br><span class="line">=== <span class="comment">//引用同一对象</span></span><br><span class="line">!== <span class="comment">//非引用同一对象</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>三元操作符</strong><br><code>a == b ? c : d</code><br>三元运算可以减少一些if…else的语句<br><strong>Nil Coalescing Operator</strong><br>optional类型后面会讲到。<br>这是在swift中特有的操作符，用来处理和判断optional类型数据。<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let a: String? = <span class="string">"lalala"</span></span><br><span class="line">let happy = a ?? <span class="string">"wuwuwu"</span></span><br></pre></td></tr></table></figure></p>
+<p>当a不为nil时，happy等于“happy”，否则表示“wuwuwu”<br><strong>区间操作符</strong><br><code>a...b //闭区间</code><br><code>a..&lt;b //半开半闭区间</code><br><strong>逻辑运算符</strong><br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&amp;&amp; <span class="comment">//与</span></span><br><span class="line">|| <span class="comment">//或</span></span><br><span class="line">！ <span class="comment">//非</span></span><br></pre></td></tr></table></figure></p>
+<p>至于字符串类型，因为swift4.0之后，string又成为了集合类型，待复习完集合类型之后，我们在反过头来继续复习字符串。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://mqch295.github.io/2018/04/25/Git入门-修改管理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mqch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mqch's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/25/Git入门-修改管理/" itemprop="url">Git入门-修改管理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-25T09:39:23+08:00">
+                2018-04-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>昨天大概说了一下Git的基本入门，包括安装及初始化，还有一些Git中常用的方法，包括：添加、提交、查看文件状态、查看修改内容、查看提交日志、版本回退。在使用版本回退时会遇到一些特殊的情况，今天就整理一下对于版本回退及对于修改操作的管理。</p>
+<h4 id="暂存区与工作区"><a href="#暂存区与工作区" class="headerlink" title="暂存区与工作区"></a>暂存区与工作区</h4><p>首先要明白两个概念，<strong>暂存区</strong>和<strong>工作区</strong>。暂存区是Git非常重要的概念，弄明白了暂存区，就基本弄明白了Git的很多操作到底干了什么。暂存区也是与SVN最大不同的地方。工作区很简单，就是电脑里看到的目录，比如我们创建一个文件夹。<br><img src="http://os53x2lpx.bkt.clouddn.com/15246209488019.jpg" alt=""><br>可以看到devFile里已经有了<code>.git</code>目录，说明这<code>devFile</code>个目录就是我们的工作区。<br><code>.git</code>目录就是我们的版本库，其中最重要的就是我们说的<strong>暂存区(stage)</strong>。<br><img src="http://os53x2lpx.bkt.clouddn.com/15246214203026.jpg" alt=""><br>先看一下这个图，左边就是我们的<strong>工作区</strong>，当我们操作完成时，使用<code>git add</code>命令将工作区的文件添加到暂存区，然后再进行<code>git commit</code>操作提交到分支上。从图中可以看出，暂存区是存放工作区添加进来的文件或对应的操作。所以，我们可以进行<strong>多次</strong><code>git add</code>,等到你觉得OK的时候，再一次性提交。提交之后并且工作区未做任何操作，暂存区去就清空了，变得干干净净。</p>
+<h4 id="管理修改"><a href="#管理修改" class="headerlink" title="管理修改"></a>管理修改</h4><h5 id="跟踪修改"><a href="#跟踪修改" class="headerlink" title="跟踪修改"></a>跟踪修改</h5><p>首先要明白Git跟踪并管理的是修改，而非文件。比如对于一个文本文件，新增了一行，这就是一个修改，删除了一行，也是一个修改，更改了某些字符，也是一个修改，删了一些又加了一些，也是一个修改。甚至创建一个新文件，也算一个修改。<br>先创建一个text文件，然后在readme.text中输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Git is a distributed version control system.</span><br><span class="line">Git is free software distributed under the GPL.</span><br><span class="line">Git has a mutable index called stage.</span><br><span class="line">Git tracks changes.</span><br></pre></td></tr></table></figure>
+<p><img src="http://os53x2lpx.bkt.clouddn.com/15246245279663.jpg" alt=""><br>然后将readme.text添加到暂存区并提交<br><img src="http://os53x2lpx.bkt.clouddn.com/15246247447817.jpg" alt=""><br><img src="http://os53x2lpx.bkt.clouddn.com/15246252397219.jpg" alt=""></p>
+<p><img src="http://os53x2lpx.bkt.clouddn.com/15246251966177.jpg" alt=""></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://mqch295.github.io/2018/04/24/Git入门-简介/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mqch">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mqch's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/24/Git入门-简介/" itemprop="url">Git入门</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-24T15:40:27+08:00">
+                2018-04-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="http://os53x2lpx.bkt.clouddn.com/0.jpeg" alt="0"></p>
+<p>从实习到现在，对于版本控制一直没有系统的学习过，公司一直使用的是SVN（简单使用），还没有用过Git,由于最近被安利了一波Git-Flow，决定把Git系统的学习一下，网上关于Git的教程及帖子，多如牛毛，在寻找教程的过程中，发现众人都推荐廖雪峰的Git教程，所以以<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的Git教程</a>为基础，开此博文以记录学习过程。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/24/Git入门-简介/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Mqch" />
+            
+              <p class="site-author-name" itemprop="name">Mqch</p>
+              <p class="site-description motion-element" itemprop="description">记录平常工作遇到的问题和学习的知识整理</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/mqch295" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:mqch295@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/Mqch295" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.instagram.com/mqch295/" target="_blank" title="Instagram">
+                      
+                        <i class="fa fa-fw fa-instagram"></i>Instagram</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/mqch295" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>微博</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mqch</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=65695485";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
