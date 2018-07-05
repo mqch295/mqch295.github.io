@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Swift的集合类型（三）]]></title>
+    <url>%2F2018%2F07%2F05%2FSwift%E7%9A%84%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B%EF%BC%88%E4%B8%89%EF%BC%89%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>Swift</category>
+      </categories>
+      <tags>
+        <tag>Swift</tag>
+        <tag>集合</tag>
+        <tag>Set</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Swift的集合类型（二）]]></title>
     <url>%2F2018%2F07%2F03%2FSwift%E7%9A%84%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B%EF%BC%88%E4%BA%8C%EF%BC%89%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[上一节中复习了关于集合的一些知识，包括集合的定义方式以及一些基本使用。今天来复习一下关于集合的更高级一些的用法。 map上一节中，我们谈到了循环遍历，当时我们使用的传统的for循环和迭代器。今天我们用map来进行循环遍历，处理元素事件。 123456let values = [1,2,3,4,5]var newValues = [Int]()for element in values&#123; newValues.append(element * element)&#125;print(newValues)//[1,4,9,16,25] 上面是我们使用for对元素进行二次方的计算，在swift中我们使用map可以更加清晰快速的获得相同结果。 123let values = [1,2,3,4,5]let newValues = values.map&#123; $0 * $0 &#125;print(newValues)// [1,4,9,16,25] 可以看到，我们代码量少了50%，如果项目中大量使用上面的for循环将会是很糟糕，而使用map则相对好些，而且相对于for循环来说，map更具有表现力。map算是swift中函数式的一个特性，我们可以在closure中实现不同的逻辑。但是要注意的是，map也会产生副作用。在使用时要千万注意使用情景。举个例子： 12345var sum = 0let newValues = values.map &#123; sum += $0 return $0 * $0&#125; 这种情况下，我们最好使用reduce单独去进行数组求和。 reducereduce一般常用于对于集合的合并上，比如上面谈到的求和，我们用reduce来表示就是：let sum = values.reduce(0, +)第一个参数表明初始值，第二个参数其实是{ $0 + $1 }的简写。如果要是计算集合各元素相乘的结果的话，只需要将加号改为乘号就可以了。这里看一个小例子，如果要计算values中各元素的乘方后的相加值得话，我们可以这样使用： 12let sum = values.map&#123; $0 * $0 &#125;.reduce(0, +)print(sum) // 55 .min .max .filter、sorted等当然对于集合的操作还有好多，比如还有查找最小值最大值，或者按照特定条件筛选元素及排序等。swift已经为我们准备好了这些常用的方法。 1234567891011121314151617181920let minElement = values.min()print(minElement) //1let maxElement = values.max()print(maxElement) // 5let evenNumbers = values.filter&#123; $0 / 2 == 0 &#125;print(evenNumbers) //[2, 4]values.forEach&#123; print($0) &#125;//1//2//...print(values.sorted())//[1,2,3,4,5]print(values.sorted(by: &gt;))//[5,4,3,2,1]print(values.contains&#123; $0 == 1&#125;)// true flatMapflatmap较map来讲，如果你只需要一维数组的话，就选择使用flatmap。在面试过程中，很容易出现这个问题，问flatmap与map的区别，使用情景是什么，如何选择。其实只要明白flatmap核心作用就是降维，就可以了。 当然以上讲到的都是我们在项目中经常使用的，还有一些不常用的方法及参数就不在这里讲了。如果有需要可以翻阅swift的API进场查看。掌握了以上讲的这些，基本算是对Array有一个比较全面的认识了。]]></content>
       <categories>
         <category>Swift</category>
       </categories>
